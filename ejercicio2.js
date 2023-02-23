@@ -205,27 +205,84 @@
 // }
 //------------------------------------------------------
 
-let color = prompt("Ingresar color:");
+// let color = prompt("Ingresar color:");
 
-switch (color) {
-  case "blanco":
-  case "negro":
-    console.log("Falta de color");
-    break;
-  case "verde":
-    console.log("Color de la naturaleza");
-    break;
-  case "amarillo":
-    console.log("Color del sol");
-    break;
-  case "azul":
-    console.log("Color del agua");
-    break;
-  case "rojo":
-    console.log("Color del fuego");
-    break;
+// switch (color) {
+//   case "blanco":
+//   case "negro":
+//     console.log("Falta de color");
+//     break;
+//   case "verde":
+//     console.log("Color de la naturaleza");
+//     break;
+//   case "amarillo":
+//     console.log("Color del sol");
+//     break;
+//   case "azul":
+//     console.log("Color del agua");
+//     break;
+//   case "rojo":
+//     console.log("Color del fuego");
+//     break;
 
-  default:
-    console.log("Excelente elección, no lo teníamos pensado");
-    break;
+//   default:
+//     console.log("Excelente elección, no lo teníamos pensado");
+//     break;
+// }
+//--------------------------------------
+
+// let num1 = prompt("Ingrese numero 1");
+// let num2 = prompt("Ingrese numero 2");
+// let operador = prompt("Ingrese operación");
+
+// switch (operador) {
+//   case "suma":
+//     let suma = parseInt(num1) + parseInt(num2);
+//     console.log("El Resultado es: " + suma);
+//     break;
+//   case "resta":
+//     let resta = parseInt(num1) - parseInt(num2);
+//     console.log("El Resultado es: " + resta);
+//     break;
+//   case "multiplicacion":
+//     let mult = parseInt(num1) * parseInt(num2);
+//     console.log("El Resultado es: " + mult);
+//     break;
+
+//   case "division":
+//     if (num2 == "0") {
+//       console.log(
+//         "ERROR, se ingreso como DIVISOR un Cero y no es posible la división"
+//       );
+//     } else {
+//       let div = parseInt(num1) / parseInt(num2);
+//       console.log("El resultado es: " + div);
+//     }
+//     break;
+
+//   default:
+//     console.log("Se ingreso un operador invalido");
+//     break;
+// }
+//------------------------------------------------
+
+let nombre = prompt("Nombre:");
+let dni = prompt("DNI:");
+let sexo = prompt("Sexo:");
+let aceptar = confirm("Esta seguro de todos sus datos?");
+
+function crearPersona(nombre, dni, sexo) {
+  let persona = {
+    nombre: nombre,
+    dni: dni,
+    sexo: sexo
+  }
+  return persona
 }
+
+if (aceptar) {
+  console.table(crearPersona(nombre,dni,sexo));
+} else {
+  console.log("Vuelva a intentar en 1 mes");
+}
+
